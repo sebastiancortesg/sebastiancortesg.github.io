@@ -1,0 +1,8 @@
+---
+title: "index"
+format: html
+---
+
+# Bienvenido al curso de Teoría Microeconómica II
+
+Aquí inicia el contenido del curso.

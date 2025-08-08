@@ -1,0 +1,20 @@
+project:
+  type: book
+  output-dir: ../../docs/cursos/microeconomia_II
+
+book:
+  title: "Teoría Microeconómica II EC2200"
+  author: "Sebastián Cortés"
+  date: "2025-08-07"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - summary.qmd
+    - references.qmd
+
+format:
+  html:
+    theme: cosmo
+    number-sections: true
+
+editor: visual
