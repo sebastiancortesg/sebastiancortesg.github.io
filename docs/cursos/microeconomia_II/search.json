@@ -1,31 +1,12 @@
 [
   {
-    "objectID": "summary.html",
-    "href": "summary.html",
-    "title": "summary",
-    "section": "",
-    "text": "Referencias\n\nVial, B., y F. Zurita. 2018. Microeconomía. 2.ª ed. Ediciones UC. https://doi.org/10.2307/j.ctt2111g56.",
-    "crumbs": [
-      "Resumen"
-    ]
-  },
-  {
-    "objectID": "intro.html",
-    "href": "intro.html",
-    "title": "intro",
-    "section": "",
-    "text": "Referencias\n\nVial, B., y F. Zurita. 2018. Microeconomía. 2.ª ed. Ediciones UC. https://doi.org/10.2307/j.ctt2111g56.",
-    "crumbs": [
-      "Introducción"
-    ]
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "index",
     "section": "",
-    "text": "1 Bienvenido al curso de Teoría Microeconómica II\nAquí inicia el contenido del curso.\n\n\n\n\n\nReferencias\n\nVial, B., y F. Zurita. 2018. Microeconomía. 2.ª ed. Ediciones UC. https://doi.org/10.2307/j.ctt2111g56.",
+    "text": "1 Bienvenido al curso de Teoría Microeconómica II\nAquí inicia el contenido del curso.",
     "crumbs": [
+      "Home",
       "Inicio"
     ]
   },
@@ -36,6 +17,7 @@
     "section": "",
     "text": "Referencias\n\nVial, B., y F. Zurita. 2018. Microeconomía. 2.ª ed. Ediciones UC. https://doi.org/10.2307/j.ctt2111g56.",
     "crumbs": [
+      "Home",
       "Referencias"
     ]
   }
