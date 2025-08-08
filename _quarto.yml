@@ -1,6 +1,9 @@
 project:
   type: website
   output-dir: docs
+  render:
+    - "*.qmd"                    # solo renderiza los .qmd de la raíz
+    - "!cursos/microeconomia_II/**"  # NO renderizar nada dentro del libro
 
 website:
   title: "Sebastián Cortés"
@@ -9,14 +12,13 @@ website:
       - href: index.qmd
         text: Home
       - text: Cursos
-        menu: 
-          - href: cursos/microeconomia_II/
+        menu:
+          - href: cursos/microeconomia_II/   # apunta al libro ya compilado
             text: Teoría Microeconómica II
 
 format:
   html:
-    theme:
-      - cosmo
+    theme: cosmo
     css: styles.css
     toc: true
 
