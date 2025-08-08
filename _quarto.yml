@@ -8,10 +8,9 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
       - text: Cursos
         menu: 
-          - href: microeconomia_II.qmd
+          - href: cursos/microeconomia_II/
             text: Teoría Microeconómica II
 
 format:
