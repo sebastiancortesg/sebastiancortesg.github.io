@@ -1,0 +1,17 @@
+---
+title: "Microeconomía II"
+format:
+  html: default
+  pdf: default
+editor: visual
+---
+
+# Teoría del consumidor
+
+$$
+\int_a^b f(x)dx
+$$
+
+# Teoría del productor
+
+# Equilibrio general

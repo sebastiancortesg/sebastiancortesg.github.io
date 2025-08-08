@@ -3,18 +3,21 @@ project:
   output-dir: docs
 
 website:
-  title: "sebastiancortesg.github.io"
+  title: "Sebastián Cortés"
   navbar:
     left:
       - href: index.qmd
         text: Home
       - about.qmd
+      - text: Cursos
+        menu: 
+          - href: microeconomia_II.qmd
+            text: Teoría Microeconómica II
 
 format:
   html:
     theme:
       - cosmo
-      - brand
     css: styles.css
     toc: true
 
