@@ -1,20 +1,35 @@
 project:
-  type: book
+  type: website
   output-dir: ../../docs/cursos/microeconomia_II
 
-book:
+lang: es
+date-format: "D [de] MMMM [de] YYYY"
+
+website:
   title: "Teoría Microeconómica II EC2200"
-  author: "Sebastián Cortés"
-  date: "2025-08-07"
-  chapters:
-    - index.qmd
-    - intro.qmd
-    - summary.qmd
-    - references.qmd
+  # usa la navbar del sitio principal
+  navbar:
+    pinned: true
+  sidebar:
+    style: floating
+    search: true
+    contents:
+      - text: "Inicio"
+        href: index.qmd
+      - text: "Introducción"
+        href: intro.qmd
+      - text: "Resumen"
+        href: summary.qmd
+      - text: "Referencias"
+        href: references.qmd
+
+bibliography: references.bib
+nocite: '@*'
 
 format:
   html:
+    lang: es
     theme: cosmo
+    toc: true
+    toc-title: "Tabla de contenidos"
     number-sections: true
-
-editor: visual
