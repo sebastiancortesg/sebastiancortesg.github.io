@@ -27,7 +27,7 @@ website:
         href: intro.qmd
       - text: "Tercer parcial"
         href: summary.qmd
-      - text: "Material de apoyo"
+      - text: "Material del curso"
         href: material_apoyo.qmd
       - text: "Referencias"
         href: references.qmd
@@ -41,4 +41,4 @@ format:
     theme: cosmo
     toc: true
     toc-title: "Tabla de contenidos"
-    number-sections: true
+    number-sections: false

@@ -1,10 +1,21 @@
 [
   {
+    "objectID": "material_apoyo.html",
+    "href": "material_apoyo.html",
+    "title": "Material del curso",
+    "section": "",
+    "text": "Carpeta Laboratorio Teoría Microeconómica II\nCarpeta material de apoyo",
+    "crumbs": [
+      "Home",
+      "Material del curso"
+    ]
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Primer parcial",
     "section": "",
-    "text": "1 Repaso\nAquí inicia el contenido del curso.",
+    "text": "Lab 1: Repaso\nAquí inicia el contenido del curso.\n\n\nLab 2",
     "crumbs": [
       "Home",
       "Primer parcial"
@@ -15,7 +26,7 @@
     "href": "references.html",
     "title": "Referencias",
     "section": "",
-    "text": "Referencias\n\nVial, B., y F. Zurita. 2018. Microeconomía. 2.ª ed. Ediciones UC. https://doi.org/10.2307/j.ctt2111g56.",
+    "text": "Vial, B., y F. Zurita. 2018. Microeconomía. 2.ª ed. Ediciones UC. https://doi.org/10.2307/j.ctt2111g56.\n\n\n\n\nAviso\nEl presente documento se basa en el curso de Teoría Microeconómica II, impartido por el profesor Edgar Robles y el asistente Sebastián Fernández. Gran parte del contenido corresponde a una reproducción literal de los apuntes elaborados tanto por el profesor como por el asistente durante las clases, así como a material compartido en dicho curso. Una parte menor proviene de apuntes propios y explicaciones personales.\nUsted es libre de:\n- Compartir — copiar y redistribuir el material en cualquier medio o formato.\nLa licenciante no puede revocar estas libertades en tanto usted siga los términos de la licencia.\nBajo los siguientes términos:\n- Atribución — Usted debe dar crédito de manera adecuada, brindar un enlace a la licencia, e indicar si se han realizado cambios. Puede hacerlo en cualquier forma razonable, pero no de forma tal que sugiera que usted o su uso tienen el apoyo de la licenciante.\n- No Comercial — Usted no puede hacer uso del material con propósitos comerciales.\n- Sin Derivadas — Si remezcla, transforma o crea a partir del material, no podrá distribuir el material modificado.\nNo hay restricciones adicionales — No puede aplicar términos legales ni medidas tecnológicas que restrinjan legalmente a otros a hacer cualquier uso permitido por la licencia.",
     "crumbs": [
       "Home",
       "Referencias"

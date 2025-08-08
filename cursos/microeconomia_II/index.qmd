@@ -1,8 +1,13 @@
 ---
 title: "Primer parcial"
-format: html
+format: 
+  html: default
+  pdf: default        # <-- genera también PDF
+format-links: [pdf] 
 ---
 
-# Repaso
+# Lab 1: Repaso
 
 Aquí inicia el contenido del curso.
+
+# Lab 2

@@ -1,5 +1,8 @@
 ---
-title: "material_apoyo"
+title: "Material del curso"
 format: html
 ---
 
+-   [**Carpeta Laboratorio Teoría Microeconómica II**](https://6f33fa7f78ea46e2aaca-my.sharepoint.com/:f:/g/personal/sebastian_cortesgutierrez_ucr_ac_cr/EqSSZ_zUVNJBmeF0b5rGe30Bg4e6PmnBmwQb-6F8fof_RA?e=mc2JeL)
+
+-   [**Carpeta material de apoyo**](https://6f33fa7f78ea46e2aaca-my.sharepoint.com/:f:/g/personal/sebastian_cortesgutierrez_ucr_ac_cr/EpbPCqdwOH5DnCDwPuFKHVkBrQ6fNIXW_YYdEeWg5pUbCw?e=i20eCA)
