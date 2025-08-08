@@ -9,7 +9,6 @@ website:
   title: "Teoría Microeconómica II EC2200"
   # usa la navbar del sitio principal
   navbar:
-    #background: light
     pinned: true
     left:
       - href: ../../          # ← vuelve al Home del sitio (docs/)
@@ -22,11 +21,11 @@ website:
     style: floating
     search: true
     contents:
-      - text: "Inicio"
+      - text: "Primer parcial"
         href: index.qmd
-      - text: "Introducción"
+      - text: "Segundo parcial"
         href: intro.qmd
-      - text: "Resumen"
+      - text: "Tercer parcial"
         href: summary.qmd
       - text: "Material de apoyo"
         href: material_apoyo.qmd
