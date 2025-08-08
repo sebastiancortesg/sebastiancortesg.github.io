@@ -28,6 +28,8 @@ website:
         href: intro.qmd
       - text: "Resumen"
         href: summary.qmd
+      - text: "Material de apoyo"
+        href: material_apoyo.qmd
       - text: "Referencias"
         href: references.qmd
 

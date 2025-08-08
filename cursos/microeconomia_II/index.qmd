@@ -1,8 +1,8 @@
 ---
-title: "index"
+title: "Primer parcial"
 format: html
 ---
 
-# Bienvenido al curso de Teoría Microeconómica II
+# Repaso
 
 Aquí inicia el contenido del curso.
