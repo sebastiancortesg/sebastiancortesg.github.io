@@ -10,4 +10,16 @@ format-links: [pdf]
 
 Aquí inicia el contenido del curso.
 
+texto
+
+texto
+
+texto
+
+texto texto
+
+texto
+
+texto
+
 # Lab 2

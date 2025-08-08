@@ -12,11 +12,13 @@ website:
     pinned: true
     left:
       - href: ../../          # ← vuelve al Home del sitio (docs/)
-        text: Home            # o "Inicio", como prefieras
+        text: Inicio            # o "Inicio", como prefieras
       - text: Cursos
         menu:
           - href: ../../cursos/microeconomia_II/
             text: Teoría Microeconómica II
+  page-footer:
+    center: "© 2025 Sebastián Cortés"
   sidebar:
     style: floating
     search: true
@@ -24,9 +26,9 @@ website:
       - text: "Primer parcial"
         href: index.qmd
       - text: "Segundo parcial"
-        href: intro.qmd
+        href: segundo_parcial.qmd
       - text: "Tercer parcial"
-        href: summary.qmd
+        href: tercer_parcial.qmd
       - text: "Material del curso"
         href: material_apoyo.qmd
       - text: "Referencias"
@@ -42,3 +44,9 @@ format:
     toc: true
     toc-title: "Tabla de contenidos"
     number-sections: false
+  pdf:
+    toc: true
+    toc-depth: 3
+    toc-title: "Tabla de contenidos"
+    lot: true
+    lof: true

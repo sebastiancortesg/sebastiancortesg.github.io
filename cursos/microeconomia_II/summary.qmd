@@ -1,4 +1,0 @@
----
-title: "Tercer parcial"
-format: html
----

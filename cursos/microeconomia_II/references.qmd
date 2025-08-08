@@ -10,14 +10,13 @@ bibliography: references.bib
 ::: {#refs}
 :::
 
----
-
+------------------------------------------------------------------------
 
 > **Aviso**\
 > El presente documento se basa en el curso de Teoría Microeconómica II, impartido por el profesor Edgar Robles y el asistente Sebastián Fernández. Gran parte del contenido corresponde a una reproducción literal de los apuntes elaborados tanto por el profesor como por el asistente durante las clases, así como a material compartido en dicho curso. Una parte menor proviene de apuntes propios y explicaciones personales.
 >
 > **Usted es libre de:**\
-> - Compartir — copiar y redistribuir el material en cualquier medio o formato.\
+> Compartir — copiar y redistribuir el material en cualquier medio o formato.\
 > La licenciante no puede revocar estas libertades en tanto usted siga los términos de la licencia.
 >
 > **Bajo los siguientes términos:**\

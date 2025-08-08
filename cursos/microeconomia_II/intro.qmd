@@ -1,5 +1,0 @@
----
-title: "Segundo parcial"
-format: html
----
-

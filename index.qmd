@@ -14,7 +14,7 @@ about:
 ---
 
 ::: {#hero-heading}
-¡Hola! Bienvenido a mi sitio. Aquí encontrarás apuntes y recursos de estudio organizados por curso.
+¡Hola! Bienvenido a mi sitio web. Aquí encontrarás apuntes y materiales de estudio organizados por curso.
 
 -   [Teoría Microeconómica II EC2200](https://sebastiancortesg.github.io/cursos/microeconomia_II/)
 
@@ -30,5 +30,3 @@ Universidad de Costa Rica \| Asistente de Teoría Microeconómica II (EC2200) \|
 
 Instituto de Investigaciones en Ciencias Económicas (IICE) \| Asistente de Investigación
 :::
-
-------------------------------------------------------------------------

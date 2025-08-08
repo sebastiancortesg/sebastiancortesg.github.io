@@ -1,0 +1,8 @@
+---
+title: "Segundo parcial"
+format: 
+  html: default
+  pdf: default        # <-- genera también PDF
+format-links: [pdf] 
+---
+

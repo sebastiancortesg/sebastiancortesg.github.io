@@ -13,11 +13,13 @@ website:
   navbar:
     left:
       - href: index.qmd
-        text: Home
+        text: Inicio
       - text: Cursos
         menu:
           - href: cursos/microeconomia_II/   # apunta al libro ya compilado
             text: Teoría Microeconómica II
+  page-footer:
+    center: "© 2025 Sebastián Cortés"
   search:
     location: navbar
     type: overlay   # buscador en overlay (en español si lang=es)
@@ -32,4 +34,5 @@ format:
     code-copy: true       # botón “Copiar”
     link-external-newwindow: true
 
+    
 editor: visual
