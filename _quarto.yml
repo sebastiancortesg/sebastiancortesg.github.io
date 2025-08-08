@@ -4,6 +4,9 @@ project:
   render:
     - "*.qmd"                    # solo renderiza los .qmd de la raíz
     - "!cursos/microeconomia_II/**"  # NO renderizar nada dentro del libro
+    
+lang: es
+date-format: "D [de] MMMM [de] YYYY"
 
 website:
   title: "Sebastián Cortés"
@@ -15,12 +18,19 @@ website:
         menu:
           - href: cursos/microeconomia_II/   # apunta al libro ya compilado
             text: Teoría Microeconómica II
-
+  search:
+    location: navbar
+    type: overlay   # buscador en overlay (en español si lang=es)
+    
 format:
   html:
+    lang: es              # atributo lang del HTML
+    toc: true
+    toc-title: "Tabla de contenidos"
     theme: cosmo
     css: styles.css
-    toc: true
+    code-copy: true       # botón “Copiar”
+    link-external-newwindow: true
 
 editor: visual
 
