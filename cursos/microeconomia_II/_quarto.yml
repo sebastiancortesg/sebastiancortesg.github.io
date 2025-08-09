@@ -19,6 +19,7 @@ website:
             text: Teoría Microeconómica II
   page-footer:
     center: "© 2025 Sebastián Cortés"
+    
   sidebar:
     style: floating
     search: true
@@ -35,7 +36,6 @@ website:
         href: references.qmd
 
 bibliography: references.bib
-
 
 format:
   html:

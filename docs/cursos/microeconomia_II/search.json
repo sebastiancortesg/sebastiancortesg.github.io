@@ -11,11 +11,55 @@
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
+    "objectID": "index.html#sumatorias-y-productorias",
+    "href": "index.html#sumatorias-y-productorias",
     "title": "Primer parcial",
-    "section": "",
-    "text": "Lab 1: Repaso\nAquí inicia el contenido del curso.\ntexto\ntexto\ntexto\ntexto texto\ntexto\ntexto\n\n\nLab 2",
+    "section": "Sumatorias y productorias",
+    "text": "Sumatorias y productorias\nConsidere una secuencia de objetos \\(\\{x_i\\}_{i=1}^n=\\{x_1,x_2,\\dots,x_n\\}\\) para los cuales están definidas la suma y la multiplicación.\nPara trabajar con muchos términos se usan puntos suspensivos:\n\n\\(x_1 + x_2 + x_3 + \\dots + x_{n-1} + x_n,\\)\n\n\\(x_1 \\cdot x_2 \\cdot x_3 \\cdot \\dots \\cdot x_{n-1} \\cdot x_n.\\)\n\nCuando esta notación es poco conveniente, se usan las notaciones \\(\\Sigma\\) (sumatoria) y \\(\\Pi\\) (productoria).",
+    "crumbs": [
+      "Inicio",
+      "Primer parcial"
+    ]
+  },
+  {
+    "objectID": "index.html#sumatorias",
+    "href": "index.html#sumatorias",
+    "title": "Primer parcial",
+    "section": "Sumatorias",
+    "text": "Sumatorias\nSean \\(k,n\\in \\mathbb{N}\\) tales que \\(k\\le n\\). Definimos la notación Sigma (\\(\\Sigma\\)) así:\n\\[\n\\sum_{i=k}^{n} x_i \\;=\\; x_k + x_{k+1} + \\dots + x_{n-1} + x_n.\n\\]\n\\[\n\\begin{aligned}\ni &: \\text{Índice de la sumatoria} &\\quad k &: \\text{Primer término} \\\\\nx_i &: \\text{Argumento de la sumatoria} &\\quad n &: \\text{Último término}\n\\end{aligned}\n\\]\n\nPropiedades de la sumatoria\nSean \\(\\{x_i\\}_{i=1}^n,\\{y_i\\}_{i=1}^n\\) secuencias de objetos \\(j\\in\\mathbb{N}\\) tal que \\(k\\le j\\le n\\); y \\(c\\) una constante (cualquier objeto que no varíe conforme aumenta el contador).\n\nSumatoria de constantes \\[\n\\sum_{i=k}^{n} c\n\\;=\\; \\underbrace{c+c+\\cdots+c}_{n-k+1\\ \\text{veces}}\n\\;=\\; (n-k+1)c.\n\\]\nDistributividad \\[\n\\sum_{i=k}^{n} c\\,x_i \\;=\\; c\\sum_{i=k}^{n} x_i.\n\\]\nEliminación de términos \\[\n\\sum_{\\substack{i=k \\\\ i\\ne j}}^{n} x_i \\;=\\; \\sum_{i=k}^{n} x_i - x_j.\n\\]\nCambio de índice \\[\n\\sum_{i=k}^{n} x_i \\;=\\; \\sum_{t=k}^{n} x_t.\n\\]\nAsociatividad (linealidad en la suma) \\[\n\\sum_{i=k}^{n} (x_i + y_i)\n\\;=\\; \\sum_{i=k}^{n} x_i \\;+\\; \\sum_{i=k}^{n} y_i.\n\\]\n\n\n\nAlgunas identidades importantes\n\nSuma de Gauss \\[\n\\sum_{i=1}^{n} i \\;=\\; \\frac{n(n+1)}{2}.\n\\]\nSuma de cuadrados \\[\n\\sum_{i=1}^{n} i^2 \\;=\\; \\frac{n(n+1)(2n+1)}{6}.\n\\]\nSuma de cubos \\[\n\\sum_{i=1}^{n} i^3 \\;=\\; \\left(\\frac{n(n+1)}{2}\\right)^2.\n\\]\n\n\n\nErrores por evitar (sumatorias)\nNo sobredefinir índices: \\[\n    \\sum_{i=k}^{n}\\Bigg(\\sum_{i=k}^{n} x_{i\\ell}\\Bigg)\\quad\\text{(incorrecto)}\\qquad\n    \\sum_{i=k}^{n}\\Bigg(\\sum_{\\ell=k}^{n} x_{i\\ell}\\Bigg)\\quad\\text{(correcto)}\n    \\]\nEn general, las siguientes no son ciertas:\n\nRecíprocos \\[\n  \\sum_{i=k}^{n}\\frac{1}{x_i}\\;\\ne\\;\\frac{1}{\\sum_{i=k}^{n} x_i}\n  \\]\nProductos\n\\[\n  \\sum_{i=k}^{n} x_i y_i \\;\\ne\\; \\Big(\\sum_{i=k}^{n} x_i\\Big)\\Big(\\sum_{i=k}^{n} y_i\\Big),\n  \\]\nPotencias\n\\[\n  \\sum_{i=k}^{n} x_i^{\\,c} \\;\\ne\\; \\Big(\\sum_{i=k}^{n} x_i\\Big)^{c}.\n  \\]",
+    "crumbs": [
+      "Inicio",
+      "Primer parcial"
+    ]
+  },
+  {
+    "objectID": "index.html#productorias",
+    "href": "index.html#productorias",
+    "title": "Primer parcial",
+    "section": "Productorias",
+    "text": "Productorias\nSean \\(k,n\\in\\mathbb{N}\\) tales que \\(k\\le n\\). Definimos la notación Pi (\\(\\Pi\\)) así:\n\\[\n\\prod_{i=k}^{n} x_i \\;=\\; x_k \\cdot x_{k+1} \\cdot \\dots \\cdot x_{n-1} \\cdot x_n.\n\\]\n\\[\n\\begin{aligned}\ni &: \\text{Índice de la productoria} &\\quad k &: \\text{Primer término} \\\\\nx_i &: \\text{Argumento de la productoria} &\\quad n &: \\text{Último término}\n\\end{aligned}\n\\]\n\nPropiedades de la productoria\nSean \\(\\{x_i\\}_{i=1}^n,\\{y_i\\}_{i=1}^n\\) secuencias de objetos, \\(j\\) tal que \\(k\\le j\\le n\\); y \\(c\\) constante (cualquier objeto que no varíe conforme aumenta el contador).\n\nProductoria de constantes \\[\n\\prod_{i=k}^{n} c\n\\;=\\; \\underbrace{c\\cdot c\\cdots c}_{n-k+1\\ \\text{veces}}\n\\;=\\; c^{\\,n-k+1}.\n\\]\nConstante por término \\[\n\\prod_{i=k}^{n} (c\\,x_i)\n\\;=\\; c^{\\,n-k+1}\\prod_{i=k}^{n} x_i.\n\\]\nEliminación de un término \\[\n\\prod_{\\substack{i=k \\\\ i\\ne j}}^{n} x_i\n\\;=\\; \\frac{\\prod_{i=k}^{n} x_i}{x_j}.\n\\]\nCambio de índice \\[\n\\prod_{i=k}^{n} x_i \\;=\\; \\prod_{t=k}^{n} x_t.\n\\]\nConmutatividad (producto término a término) \\[\n\\prod_{i=k}^{n} (x_i y_i)\n\\;=\\; \\Big(\\prod_{i=k}^{n} x_i\\Big)\\Big(\\prod_{i=k}^{n} y_i\\Big).\n\\]\nCociente de productos (si \\(y_i\\ne 0\\) para todo \\(i\\)) \\[\n\\prod_{i=k}^{n} \\frac{x_i}{y_i}\n\\;=\\;\n\\frac{\\prod_{i=k}^{n} x_i}{\\prod_{i=k}^{n} y_i}.\n\\]\nPotencia de productoria \\[\n\\prod_{i=k}^{n} x_i^{\\,c}\n\\;=\\; \\Big(\\prod_{i=k}^{n} x_i\\Big)^{c}.\n\\]\nBase constante elevada a \\(x_i\\) \\[\n\\prod_{i=k}^{n} c^{\\,x_i}\n\\;=\\; c^{\\sum_{i=k}^{n} x_i}.\n\\]\n\n\n\nErrores por evitar (productorias)\nNo sobredefinir índices: \\[\n    \\prod_{i=k}^{n}\\Bigg(\\prod_{i=k}^{n} x_{i\\ell}\\Bigg)\\quad\\text{(incorrecto)}\\qquad\n    \\prod_{i=k}^{n}\\Bigg(\\prod_{\\ell=k}^{n} x_{i\\ell}\\Bigg)\\quad\\text{(correcto)}\n    \\]\nEn general, las siguientes no son ciertas: \\[\n    \\prod_{i=k}^{n}(x_i+y_i)\\;\\ne\\;\\prod_{i=k}^{n}x_i+\\prod_{i=k}^{n}y_i,\n    \\] \\[\n    \\prod_{i=k}^{n}(x_i-y_i)\\;\\ne\\;\\prod_{i=k}^{n}x_i-\\prod_{i=k}^{n}y_i.\n    \\]\n\n\n\n\n\n\nTip\n\n\n\nEn caso de olvidar alguna propiedad, desarrolle la productoria o sumatoria para 2-3 elementos y observe si incumple alguna propiedad.",
+    "crumbs": [
+      "Inicio",
+      "Primer parcial"
+    ]
+  },
+  {
+    "objectID": "index.html#ejercicio",
+    "href": "index.html#ejercicio",
+    "title": "Primer parcial",
+    "section": "Ejercicio",
+    "text": "Ejercicio\nSimplifique al máximo, usando las propiedades:\n\n\\(\\displaystyle\n\\frac{\\prod_{\\substack{i=1 \\\\ i\\ne j}}^{\\,n} x_i}\n     {\\prod_{\\substack{i=1 \\\\ i\\ne k}}^{\\,n} x_i}\\)\n\\(\\displaystyle\n\\sum_{i=1}^{n}\\left[\\,x_i\\sum_{j=1}^{n}\\left(\\frac{1}{x_j}\\right)\\right]\\)\n\\(\\displaystyle\nx_j^{2}\\,\\prod_{\\substack{i=2 \\\\ i\\ne j}}^{\\,n}\\frac{P_j\\,x_j}{P_i}\\)\n\\(\\displaystyle\n\\prod_{j=2}^{n}\\frac{P_j}{\\prod_{i=1}^{n} P_i^{\\,1/n}}\\)\n\\(\\displaystyle\n\\sum_{i=1}^{n}\\big(i^{2}+i+1\\big)\\)\n\\(\\displaystyle\n\\log\\!\\left(\\prod_{i=1}^{n}\\frac{x_i^{\\alpha_i}}{i}\\right)\\)",
+    "crumbs": [
+      "Inicio",
+      "Primer parcial"
+    ]
+  },
+  {
+    "objectID": "index.html#optimización",
+    "href": "index.html#optimización",
+    "title": "Primer parcial",
+    "section": "Optimización",
+    "text": "Optimización\n\nOptimización con restricción de igualdad\nEncuentre el máximo de \\(f:\\mathbb{R}\\times\\mathbb{R}_{&gt;0}\\to\\mathbb{R}\\), \\[\nf(x_1,x_2) = x_1 + 3\\ln(x_2)\n\\quad\\text{sujeto a}\\quad\n100 = 2x_1 + x_2.\n\\]\n\n\nOptimización con restricción de desigualdad\nUn consumidor obtiene utilidad de cerveza \\(x_1\\) y limonada \\(x_2\\): \\[\nU(x_1,x_2)=x_1^{3/4}x_2^{1/4}.\n\\] Por recomendación médica, el individuo tiene estrictamente prohibido gastar más de una fracción \\(k\\in[0,1]\\) de su ingreso en cervezas. Encuentre el óptimo del consumidor y desarrolle los casos según el valor de \\(k\\).",
     "crumbs": [
       "Inicio",
       "Primer parcial"

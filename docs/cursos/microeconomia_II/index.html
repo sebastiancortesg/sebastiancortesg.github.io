@@ -66,6 +66,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -172,7 +201,28 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
-  <li><a href="#lab-1-repaso" id="toc-lab-1-repaso" class="nav-link active" data-scroll-target="#lab-1-repaso">Lab 1: Repaso</a></li>
+  <li><a href="#recomendaciones-generales" id="toc-recomendaciones-generales" class="nav-link active" data-scroll-target="#recomendaciones-generales">Recomendaciones generales</a></li>
+  <li><a href="#lab-1-sumatorias-productorias-y-optimización" id="toc-lab-1-sumatorias-productorias-y-optimización" class="nav-link" data-scroll-target="#lab-1-sumatorias-productorias-y-optimización">Lab 1: Sumatorias, productorias y optimización</a>
+  <ul class="collapse">
+  <li><a href="#sumatorias-y-productorias" id="toc-sumatorias-y-productorias" class="nav-link" data-scroll-target="#sumatorias-y-productorias">Sumatorias y productorias</a></li>
+  <li><a href="#sumatorias" id="toc-sumatorias" class="nav-link" data-scroll-target="#sumatorias">Sumatorias</a>
+  <ul class="collapse">
+  <li><a href="#propiedades-de-la-sumatoria" id="toc-propiedades-de-la-sumatoria" class="nav-link" data-scroll-target="#propiedades-de-la-sumatoria">Propiedades de la sumatoria</a></li>
+  <li><a href="#algunas-identidades-importantes" id="toc-algunas-identidades-importantes" class="nav-link" data-scroll-target="#algunas-identidades-importantes">Algunas identidades importantes</a></li>
+  <li><a href="#errores-por-evitar-sumatorias" id="toc-errores-por-evitar-sumatorias" class="nav-link" data-scroll-target="#errores-por-evitar-sumatorias">Errores por evitar (sumatorias)</a></li>
+  </ul></li>
+  <li><a href="#productorias" id="toc-productorias" class="nav-link" data-scroll-target="#productorias">Productorias</a>
+  <ul class="collapse">
+  <li><a href="#propiedades-de-la-productoria" id="toc-propiedades-de-la-productoria" class="nav-link" data-scroll-target="#propiedades-de-la-productoria">Propiedades de la productoria</a></li>
+  <li><a href="#errores-por-evitar-productorias" id="toc-errores-por-evitar-productorias" class="nav-link" data-scroll-target="#errores-por-evitar-productorias">Errores por evitar (productorias)</a></li>
+  </ul></li>
+  <li><a href="#ejercicio" id="toc-ejercicio" class="nav-link" data-scroll-target="#ejercicio">Ejercicio</a></li>
+  <li><a href="#optimización" id="toc-optimización" class="nav-link" data-scroll-target="#optimización">Optimización</a>
+  <ul class="collapse">
+  <li><a href="#optimización-con-restricción-de-igualdad" id="toc-optimización-con-restricción-de-igualdad" class="nav-link" data-scroll-target="#optimización-con-restricción-de-igualdad">Optimización con restricción de igualdad</a></li>
+  <li><a href="#optimización-con-restricción-de-desigualdad" id="toc-optimización-con-restricción-de-desigualdad" class="nav-link" data-scroll-target="#optimización-con-restricción-de-desigualdad">Optimización con restricción de desigualdad</a></li>
+  </ul></li>
+  </ul></li>
   <li><a href="#lab-2" id="toc-lab-2" class="nav-link" data-scroll-target="#lab-2">Lab 2</a></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Otros formatos</h2><ul><li><a href="index.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
@@ -199,15 +249,211 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="lab-1-repaso" class="level1">
-<h1>Lab 1: Repaso</h1>
-<p>Aquí inicia el contenido del curso.</p>
-<p>texto</p>
-<p>texto</p>
-<p>texto</p>
-<p>texto texto</p>
-<p>texto</p>
-<p>texto</p>
+<section id="recomendaciones-generales" class="level1">
+<h1>Recomendaciones generales</h1>
+<ul>
+<li></li>
+<li></li>
+</ul>
+</section>
+<section id="lab-1-sumatorias-productorias-y-optimización" class="level1">
+<h1>Lab 1: Sumatorias, productorias y optimización</h1>
+<section id="sumatorias-y-productorias" class="level2">
+<h2 class="anchored" data-anchor-id="sumatorias-y-productorias">Sumatorias y productorias</h2>
+<p>Considere una secuencia de objetos <span class="math inline">\(\{x_i\}_{i=1}^n=\{x_1,x_2,\dots,x_n\}\)</span> para los cuales están definidas la suma y la multiplicación.<br>
+Para trabajar con muchos términos se usan puntos suspensivos:</p>
+<ul>
+<li><span class="math inline">\(x_1 + x_2 + x_3 + \dots + x_{n-1} + x_n,\)</span><br>
+</li>
+<li><span class="math inline">\(x_1 \cdot x_2 \cdot x_3 \cdot \dots \cdot x_{n-1} \cdot x_n.\)</span></li>
+</ul>
+<p>Cuando esta notación es poco conveniente, se usan las notaciones <span class="math inline">\(\Sigma\)</span> (sumatoria) y <span class="math inline">\(\Pi\)</span> (productoria).</p>
+</section>
+<section id="sumatorias" class="level2">
+<h2 class="anchored" data-anchor-id="sumatorias">Sumatorias</h2>
+<p>Sean <span class="math inline">\(k,n\in \mathbb{N}\)</span> tales que <span class="math inline">\(k\le n\)</span>. Definimos la notación Sigma (<span class="math inline">\(\Sigma\)</span>) así:</p>
+<p><span class="math display">\[
+\sum_{i=k}^{n} x_i \;=\; x_k + x_{k+1} + \dots + x_{n-1} + x_n.
+\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+i &amp;: \text{Índice de la sumatoria} &amp;\quad k &amp;: \text{Primer término} \\
+x_i &amp;: \text{Argumento de la sumatoria} &amp;\quad n &amp;: \text{Último término}
+\end{aligned}
+\]</span></p>
+<section id="propiedades-de-la-sumatoria" class="level3">
+<h3 class="anchored" data-anchor-id="propiedades-de-la-sumatoria">Propiedades de la sumatoria</h3>
+<p>Sean <span class="math inline">\(\{x_i\}_{i=1}^n,\{y_i\}_{i=1}^n\)</span> secuencias de objetos <span class="math inline">\(j\in\mathbb{N}\)</span> tal que <span class="math inline">\(k\le j\le n\)</span>; y <span class="math inline">\(c\)</span> una constante (cualquier objeto que no varíe conforme aumenta el contador).</p>
+<ol type="1">
+<li><p><strong>Sumatoria de constantes</strong> <span class="math display">\[
+\sum_{i=k}^{n} c
+\;=\; \underbrace{c+c+\cdots+c}_{n-k+1\ \text{veces}}
+\;=\; (n-k+1)c.
+\]</span></p></li>
+<li><p><strong>Distributividad</strong> <span class="math display">\[
+\sum_{i=k}^{n} c\,x_i \;=\; c\sum_{i=k}^{n} x_i.
+\]</span></p></li>
+<li><p><strong>Eliminación de términos</strong> <span class="math display">\[
+\sum_{\substack{i=k \\ i\ne j}}^{n} x_i \;=\; \sum_{i=k}^{n} x_i - x_j.
+\]</span></p></li>
+<li><p><strong>Cambio de índice</strong> <span class="math display">\[
+\sum_{i=k}^{n} x_i \;=\; \sum_{t=k}^{n} x_t.
+\]</span></p></li>
+<li><p><strong>Asociatividad (linealidad en la suma)</strong> <span class="math display">\[
+\sum_{i=k}^{n} (x_i + y_i)
+\;=\; \sum_{i=k}^{n} x_i \;+\; \sum_{i=k}^{n} y_i.
+\]</span></p></li>
+</ol>
+</section>
+<section id="algunas-identidades-importantes" class="level3">
+<h3 class="anchored" data-anchor-id="algunas-identidades-importantes">Algunas identidades importantes</h3>
+<ol type="1">
+<li><p><strong>Suma de Gauss</strong> <span class="math display">\[
+\sum_{i=1}^{n} i \;=\; \frac{n(n+1)}{2}.
+\]</span></p></li>
+<li><p><strong>Suma de cuadrados</strong> <span class="math display">\[
+\sum_{i=1}^{n} i^2 \;=\; \frac{n(n+1)(2n+1)}{6}.
+\]</span></p></li>
+<li><p><strong>Suma de cubos</strong> <span class="math display">\[
+\sum_{i=1}^{n} i^3 \;=\; \left(\frac{n(n+1)}{2}\right)^2.
+\]</span></p></li>
+</ol>
+</section>
+<section id="errores-por-evitar-sumatorias" class="level3">
+<h3 class="anchored" data-anchor-id="errores-por-evitar-sumatorias">Errores por evitar (sumatorias)</h3>
+<p><strong>No sobredefinir índices</strong>: <span class="math display">\[
+    \sum_{i=k}^{n}\Bigg(\sum_{i=k}^{n} x_{i\ell}\Bigg)\quad\text{(incorrecto)}\qquad
+    \sum_{i=k}^{n}\Bigg(\sum_{\ell=k}^{n} x_{i\ell}\Bigg)\quad\text{(correcto)}
+    \]</span></p>
+<p><strong>En general, las siguientes no son ciertas:</strong></p>
+<ul>
+<li><p>Recíprocos <span class="math display">\[
+  \sum_{i=k}^{n}\frac{1}{x_i}\;\ne\;\frac{1}{\sum_{i=k}^{n} x_i}
+  \]</span></p></li>
+<li><p>Productos<br>
+<span class="math display">\[
+  \sum_{i=k}^{n} x_i y_i \;\ne\; \Big(\sum_{i=k}^{n} x_i\Big)\Big(\sum_{i=k}^{n} y_i\Big),
+  \]</span></p></li>
+<li><p>Potencias<br>
+<span class="math display">\[
+  \sum_{i=k}^{n} x_i^{\,c} \;\ne\; \Big(\sum_{i=k}^{n} x_i\Big)^{c}.
+  \]</span></p></li>
+</ul>
+</section>
+</section>
+<section id="productorias" class="level2">
+<h2 class="anchored" data-anchor-id="productorias">Productorias</h2>
+<p>Sean <span class="math inline">\(k,n\in\mathbb{N}\)</span> tales que <span class="math inline">\(k\le n\)</span>. Definimos la notación Pi (<span class="math inline">\(\Pi\)</span>) así:</p>
+<p><span class="math display">\[
+\prod_{i=k}^{n} x_i \;=\; x_k \cdot x_{k+1} \cdot \dots \cdot x_{n-1} \cdot x_n.
+\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+i &amp;: \text{Índice de la productoria} &amp;\quad k &amp;: \text{Primer término} \\
+x_i &amp;: \text{Argumento de la productoria} &amp;\quad n &amp;: \text{Último término}
+\end{aligned}
+\]</span></p>
+<section id="propiedades-de-la-productoria" class="level3">
+<h3 class="anchored" data-anchor-id="propiedades-de-la-productoria">Propiedades de la productoria</h3>
+<p>Sean <span class="math inline">\(\{x_i\}_{i=1}^n,\{y_i\}_{i=1}^n\)</span> secuencias de objetos, <span class="math inline">\(j\)</span> tal que <span class="math inline">\(k\le j\le n\)</span>; y <span class="math inline">\(c\)</span> constante (cualquier objeto que no varíe conforme aumenta el contador).</p>
+<ol type="1">
+<li><p><strong>Productoria de constantes</strong> <span class="math display">\[
+\prod_{i=k}^{n} c
+\;=\; \underbrace{c\cdot c\cdots c}_{n-k+1\ \text{veces}}
+\;=\; c^{\,n-k+1}.
+\]</span></p></li>
+<li><p><strong>Constante por término</strong> <span class="math display">\[
+\prod_{i=k}^{n} (c\,x_i)
+\;=\; c^{\,n-k+1}\prod_{i=k}^{n} x_i.
+\]</span></p></li>
+<li><p><strong>Eliminación de un término</strong> <span class="math display">\[
+\prod_{\substack{i=k \\ i\ne j}}^{n} x_i
+\;=\; \frac{\prod_{i=k}^{n} x_i}{x_j}.
+\]</span></p></li>
+<li><p><strong>Cambio de índice</strong> <span class="math display">\[
+\prod_{i=k}^{n} x_i \;=\; \prod_{t=k}^{n} x_t.
+\]</span></p></li>
+<li><p><strong>Conmutatividad (producto término a término)</strong> <span class="math display">\[
+\prod_{i=k}^{n} (x_i y_i)
+\;=\; \Big(\prod_{i=k}^{n} x_i\Big)\Big(\prod_{i=k}^{n} y_i\Big).
+\]</span></p></li>
+<li><p><strong>Cociente de productos</strong> (si <span class="math inline">\(y_i\ne 0\)</span> para todo <span class="math inline">\(i\)</span>) <span class="math display">\[
+\prod_{i=k}^{n} \frac{x_i}{y_i}
+\;=\;
+\frac{\prod_{i=k}^{n} x_i}{\prod_{i=k}^{n} y_i}.
+\]</span></p></li>
+<li><p><strong>Potencia de productoria</strong> <span class="math display">\[
+\prod_{i=k}^{n} x_i^{\,c}
+\;=\; \Big(\prod_{i=k}^{n} x_i\Big)^{c}.
+\]</span></p></li>
+<li><p><strong>Base constante elevada a</strong> <span class="math inline">\(x_i\)</span> <span class="math display">\[
+\prod_{i=k}^{n} c^{\,x_i}
+\;=\; c^{\sum_{i=k}^{n} x_i}.
+\]</span></p></li>
+</ol>
+</section>
+<section id="errores-por-evitar-productorias" class="level3">
+<h3 class="anchored" data-anchor-id="errores-por-evitar-productorias">Errores por evitar (productorias)</h3>
+<p><strong>No sobredefinir índices</strong>: <span class="math display">\[
+    \prod_{i=k}^{n}\Bigg(\prod_{i=k}^{n} x_{i\ell}\Bigg)\quad\text{(incorrecto)}\qquad
+    \prod_{i=k}^{n}\Bigg(\prod_{\ell=k}^{n} x_{i\ell}\Bigg)\quad\text{(correcto)}
+    \]</span></p>
+<p><strong>En general, las siguientes no son ciertas:</strong> <span class="math display">\[
+    \prod_{i=k}^{n}(x_i+y_i)\;\ne\;\prod_{i=k}^{n}x_i+\prod_{i=k}^{n}y_i,
+    \]</span> <span class="math display">\[
+    \prod_{i=k}^{n}(x_i-y_i)\;\ne\;\prod_{i=k}^{n}x_i-\prod_{i=k}^{n}y_i.
+    \]</span></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>En caso de olvidar alguna propiedad, desarrolle la productoria o sumatoria para 2-3 elementos y observe si incumple alguna propiedad.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="ejercicio" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicio">Ejercicio</h2>
+<p>Simplifique al máximo, usando las propiedades:</p>
+<ol type="1">
+<li><span class="math inline">\(\displaystyle
+\frac{\prod_{\substack{i=1 \\ i\ne j}}^{\,n} x_i}
+     {\prod_{\substack{i=1 \\ i\ne k}}^{\,n} x_i}\)</span></li>
+<li><span class="math inline">\(\displaystyle
+\sum_{i=1}^{n}\left[\,x_i\sum_{j=1}^{n}\left(\frac{1}{x_j}\right)\right]\)</span></li>
+<li><span class="math inline">\(\displaystyle
+x_j^{2}\,\prod_{\substack{i=2 \\ i\ne j}}^{\,n}\frac{P_j\,x_j}{P_i}\)</span></li>
+<li><span class="math inline">\(\displaystyle
+\prod_{j=2}^{n}\frac{P_j}{\prod_{i=1}^{n} P_i^{\,1/n}}\)</span></li>
+<li><span class="math inline">\(\displaystyle
+\sum_{i=1}^{n}\big(i^{2}+i+1\big)\)</span></li>
+<li><span class="math inline">\(\displaystyle
+\log\!\left(\prod_{i=1}^{n}\frac{x_i^{\alpha_i}}{i}\right)\)</span></li>
+</ol>
+</section>
+<section id="optimización" class="level2">
+<h2 class="anchored" data-anchor-id="optimización">Optimización</h2>
+<section id="optimización-con-restricción-de-igualdad" class="level3">
+<h3 class="anchored" data-anchor-id="optimización-con-restricción-de-igualdad">Optimización con restricción de igualdad</h3>
+<p>Encuentre el máximo de <span class="math inline">\(f:\mathbb{R}\times\mathbb{R}_{&gt;0}\to\mathbb{R}\)</span>, <span class="math display">\[
+f(x_1,x_2) = x_1 + 3\ln(x_2)
+\quad\text{sujeto a}\quad
+100 = 2x_1 + x_2.
+\]</span></p>
+</section>
+<section id="optimización-con-restricción-de-desigualdad" class="level3">
+<h3 class="anchored" data-anchor-id="optimización-con-restricción-de-desigualdad">Optimización con restricción de desigualdad</h3>
+<p>Un consumidor obtiene utilidad de cerveza <span class="math inline">\(x_1\)</span> y limonada <span class="math inline">\(x_2\)</span>: <span class="math display">\[
+U(x_1,x_2)=x_1^{3/4}x_2^{1/4}.
+\]</span> Por recomendación médica, el individuo tiene estrictamente prohibido gastar más de una fracción <span class="math inline">\(k\in[0,1]\)</span> de su ingreso <strong>en cervezas</strong>. Encuentre el óptimo del consumidor y desarrolle los casos según el valor de <span class="math inline">\(k\)</span>.</p>
+</section>
+</section>
 </section>
 <section id="lab-2" class="level1">
 <h1>Lab 2</h1>

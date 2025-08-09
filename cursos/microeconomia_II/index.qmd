@@ -6,20 +6,212 @@ format:
 format-links: [pdf] 
 ---
 
-# Lab 1: Repaso
+# Recomendaciones generales
 
-Aquí inicia el contenido del curso.
+-   
 
-texto
+-   
 
-texto
+# Lab 1: Sumatorias, productorias y optimización
 
-texto
+## Sumatorias y productorias
 
-texto texto
+Considere una secuencia de objetos $\{x_i\}_{i=1}^n=\{x_1,x_2,\dots,x_n\}$ para los cuales están definidas la suma y la multiplicación.\
+Para trabajar con muchos términos se usan puntos suspensivos:
 
-texto
+-   $x_1 + x_2 + x_3 + \dots + x_{n-1} + x_n,$\
+-   $x_1 \cdot x_2 \cdot x_3 \cdot \dots \cdot x_{n-1} \cdot x_n.$
 
-texto
+Cuando esta notación es poco conveniente, se usan las notaciones $\Sigma$ (sumatoria) y $\Pi$ (productoria).
+
+## Sumatorias
+
+Sean $k,n\in \mathbb{N}$ tales que $k\le n$. Definimos la notación Sigma ($\Sigma$) así:
+
+$$
+\sum_{i=k}^{n} x_i \;=\; x_k + x_{k+1} + \dots + x_{n-1} + x_n.
+$$
+
+$$
+\begin{aligned}
+i &: \text{Índice de la sumatoria} &\quad k &: \text{Primer término} \\
+x_i &: \text{Argumento de la sumatoria} &\quad n &: \text{Último término}
+\end{aligned}
+$$
+
+### Propiedades de la sumatoria
+
+Sean $\{x_i\}_{i=1}^n,\{y_i\}_{i=1}^n$ secuencias de objetos $j\in\mathbb{N}$ tal que $k\le j\le n$; y $c$ una constante (cualquier objeto que no varíe conforme aumenta el contador).
+
+1.  **Sumatoria de constantes** $$
+    \sum_{i=k}^{n} c
+    \;=\; \underbrace{c+c+\cdots+c}_{n-k+1\ \text{veces}}
+    \;=\; (n-k+1)c.
+    $$
+
+2.  **Distributividad** $$
+    \sum_{i=k}^{n} c\,x_i \;=\; c\sum_{i=k}^{n} x_i.
+    $$
+
+3.  **Eliminación de términos** $$
+    \sum_{\substack{i=k \\ i\ne j}}^{n} x_i \;=\; \sum_{i=k}^{n} x_i - x_j.
+    $$
+
+4.  **Cambio de índice** $$
+    \sum_{i=k}^{n} x_i \;=\; \sum_{t=k}^{n} x_t.
+    $$
+
+5.  **Asociatividad (linealidad en la suma)** $$
+    \sum_{i=k}^{n} (x_i + y_i)
+    \;=\; \sum_{i=k}^{n} x_i \;+\; \sum_{i=k}^{n} y_i.
+    $$
+
+### Algunas identidades importantes
+
+1.  **Suma de Gauss** $$
+    \sum_{i=1}^{n} i \;=\; \frac{n(n+1)}{2}.
+    $$
+
+2.  **Suma de cuadrados** $$
+    \sum_{i=1}^{n} i^2 \;=\; \frac{n(n+1)(2n+1)}{6}.
+    $$
+
+3.  **Suma de cubos** $$
+    \sum_{i=1}^{n} i^3 \;=\; \left(\frac{n(n+1)}{2}\right)^2.
+    $$
+
+### Errores por evitar (sumatorias)
+
+**No sobredefinir índices**: $$
+    \sum_{i=k}^{n}\Bigg(\sum_{i=k}^{n} x_{i\ell}\Bigg)\quad\text{(incorrecto)}\qquad
+    \sum_{i=k}^{n}\Bigg(\sum_{\ell=k}^{n} x_{i\ell}\Bigg)\quad\text{(correcto)}
+    $$
+
+**En general, las siguientes no son ciertas:**
+
+-   Recíprocos $$
+      \sum_{i=k}^{n}\frac{1}{x_i}\;\ne\;\frac{1}{\sum_{i=k}^{n} x_i}
+      $$
+
+-   Productos\
+    $$
+      \sum_{i=k}^{n} x_i y_i \;\ne\; \Big(\sum_{i=k}^{n} x_i\Big)\Big(\sum_{i=k}^{n} y_i\Big),
+      $$
+
+-   Potencias\
+    $$
+      \sum_{i=k}^{n} x_i^{\,c} \;\ne\; \Big(\sum_{i=k}^{n} x_i\Big)^{c}.
+      $$
+
+## Productorias
+
+Sean $k,n\in\mathbb{N}$ tales que $k\le n$. Definimos la notación Pi ($\Pi$) así:
+
+$$
+\prod_{i=k}^{n} x_i \;=\; x_k \cdot x_{k+1} \cdot \dots \cdot x_{n-1} \cdot x_n.
+$$
+
+$$
+\begin{aligned}
+i &: \text{Índice de la productoria} &\quad k &: \text{Primer término} \\
+x_i &: \text{Argumento de la productoria} &\quad n &: \text{Último término}
+\end{aligned}
+$$
+
+### Propiedades de la productoria
+
+Sean $\{x_i\}_{i=1}^n,\{y_i\}_{i=1}^n$ secuencias de objetos, $j$ tal que $k\le j\le n$; y $c$ constante (cualquier objeto que no varíe conforme aumenta el contador).
+
+1.  **Productoria de constantes** $$
+    \prod_{i=k}^{n} c
+    \;=\; \underbrace{c\cdot c\cdots c}_{n-k+1\ \text{veces}}
+    \;=\; c^{\,n-k+1}.
+    $$
+
+2.  **Constante por término** $$
+    \prod_{i=k}^{n} (c\,x_i)
+    \;=\; c^{\,n-k+1}\prod_{i=k}^{n} x_i.
+    $$
+
+3.  **Eliminación de un término** $$
+    \prod_{\substack{i=k \\ i\ne j}}^{n} x_i
+    \;=\; \frac{\prod_{i=k}^{n} x_i}{x_j}.
+    $$
+
+4.  **Cambio de índice** $$
+    \prod_{i=k}^{n} x_i \;=\; \prod_{t=k}^{n} x_t.
+    $$
+
+5.  **Conmutatividad (producto término a término)** $$
+    \prod_{i=k}^{n} (x_i y_i)
+    \;=\; \Big(\prod_{i=k}^{n} x_i\Big)\Big(\prod_{i=k}^{n} y_i\Big).
+    $$
+
+6.  **Cociente de productos** (si $y_i\ne 0$ para todo $i$) $$
+    \prod_{i=k}^{n} \frac{x_i}{y_i}
+    \;=\;
+    \frac{\prod_{i=k}^{n} x_i}{\prod_{i=k}^{n} y_i}.
+    $$
+
+7.  **Potencia de productoria** $$
+    \prod_{i=k}^{n} x_i^{\,c}
+    \;=\; \Big(\prod_{i=k}^{n} x_i\Big)^{c}.
+    $$
+
+8.  **Base constante elevada a** $x_i$ $$
+    \prod_{i=k}^{n} c^{\,x_i}
+    \;=\; c^{\sum_{i=k}^{n} x_i}.
+    $$
+
+### Errores por evitar (productorias)
+
+**No sobredefinir índices**: $$
+    \prod_{i=k}^{n}\Bigg(\prod_{i=k}^{n} x_{i\ell}\Bigg)\quad\text{(incorrecto)}\qquad
+    \prod_{i=k}^{n}\Bigg(\prod_{\ell=k}^{n} x_{i\ell}\Bigg)\quad\text{(correcto)}
+    $$
+
+**En general, las siguientes no son ciertas:** $$
+    \prod_{i=k}^{n}(x_i+y_i)\;\ne\;\prod_{i=k}^{n}x_i+\prod_{i=k}^{n}y_i,
+    $$ $$
+    \prod_{i=k}^{n}(x_i-y_i)\;\ne\;\prod_{i=k}^{n}x_i-\prod_{i=k}^{n}y_i.
+    $$
+
+::: callout-tip
+En caso de olvidar alguna propiedad, desarrolle la productoria o sumatoria para 2-3 elementos y observe si incumple alguna propiedad.
+:::
+
+## Ejercicio
+
+Simplifique al máximo, usando las propiedades:
+
+1.  $\displaystyle
+    \frac{\prod_{\substack{i=1 \\ i\ne j}}^{\,n} x_i}
+         {\prod_{\substack{i=1 \\ i\ne k}}^{\,n} x_i}$
+2.  $\displaystyle
+    \sum_{i=1}^{n}\left[\,x_i\sum_{j=1}^{n}\left(\frac{1}{x_j}\right)\right]$
+3.  $\displaystyle
+    x_j^{2}\,\prod_{\substack{i=2 \\ i\ne j}}^{\,n}\frac{P_j\,x_j}{P_i}$
+4.  $\displaystyle
+    \prod_{j=2}^{n}\frac{P_j}{\prod_{i=1}^{n} P_i^{\,1/n}}$
+5.  $\displaystyle
+    \sum_{i=1}^{n}\big(i^{2}+i+1\big)$
+6.  $\displaystyle
+    \log\!\left(\prod_{i=1}^{n}\frac{x_i^{\alpha_i}}{i}\right)$
+
+## Optimización
+
+### Optimización con restricción de igualdad
+
+Encuentre el máximo de $f:\mathbb{R}\times\mathbb{R}_{>0}\to\mathbb{R}$, $$
+f(x_1,x_2) = x_1 + 3\ln(x_2)
+\quad\text{sujeto a}\quad
+100 = 2x_1 + x_2.
+$$
+
+### Optimización con restricción de desigualdad
+
+Un consumidor obtiene utilidad de cerveza $x_1$ y limonada $x_2$: $$
+U(x_1,x_2)=x_1^{3/4}x_2^{1/4}.
+$$ Por recomendación médica, el individuo tiene estrictamente prohibido gastar más de una fracción $k\in[0,1]$ de su ingreso **en cervezas**. Encuentre el óptimo del consumidor y desarrolle los casos según el valor de $k$.
 
 # Lab 2
