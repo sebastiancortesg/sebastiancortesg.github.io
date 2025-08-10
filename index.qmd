@@ -7,7 +7,7 @@ about:
   links:
     - icon: linkedin
       text: LinkedIn
-      href: https://cr.linkedin.com/
+      href: www.linkedin.com/in/sebastiancortesg
     - icon: envelope-fill
       text: Email
       href: mailto:sebastian.cortesgutierrez@ucr.ac.cr

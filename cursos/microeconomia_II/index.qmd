@@ -8,9 +8,11 @@ format-links: [pdf]
 
 # Recomendaciones generales
 
--   
+-   Comprender la intuición detrás de los cálculos, evitar resolver solo de manera mecánica.
 
--   
+-   Realizar mucha práctica (exámenes viejos y folletos de ejercicios), es importante desarrollar una buena habilidad en la manipulación algebraica.
+
+-   No deje dudas sin aclarar, ya que el curso tiene un carácter acumulativo.
 
 # Lab 1: Sumatorias, productorias y optimización
 
@@ -20,7 +22,7 @@ Considere una secuencia de objetos $\{x_i\}_{i=1}^n=\{x_1,x_2,\dots,x_n\}$ para 
 Para trabajar con muchos términos se usan puntos suspensivos:
 
 -   $x_1 + x_2 + x_3 + \dots + x_{n-1} + x_n,$\
--   $x_1 \cdot x_2 \cdot x_3 \cdot \dots \cdot x_{n-1} \cdot x_n.$
+-   $x_1 \cdot x_2 \cdot x_3 \cdot ... \cdot x_{n-1} \cdot x_n.$
 
 Cuando esta notación es poco conveniente, se usan las notaciones $\Sigma$ (sumatoria) y $\Pi$ (productoria).
 
@@ -41,43 +43,43 @@ $$
 
 ### Propiedades de la sumatoria
 
-Sean $\{x_i\}_{i=1}^n,\{y_i\}_{i=1}^n$ secuencias de objetos $j\in\mathbb{N}$ tal que $k\le j\le n$; y $c$ una constante (cualquier objeto que no varíe conforme aumenta el contador).
+Sean $\{x_i\}_{i=1}^n,\{y_i\}_{i=1}^n$ secuencias de objetos $j\in\mathbb{N}$ tal que $k\le j\le n$, y $c$ una constante (cualquier objeto que no varíe conforme aumenta el contador).
 
 1.  **Sumatoria de constantes** $$
     \sum_{i=k}^{n} c
     \;=\; \underbrace{c+c+\cdots+c}_{n-k+1\ \text{veces}}
-    \;=\; (n-k+1)c.
+    \;=\; (n-k+1)c
     $$
 
 2.  **Distributividad** $$
-    \sum_{i=k}^{n} c\,x_i \;=\; c\sum_{i=k}^{n} x_i.
+    \sum_{i=k}^{n} c\,x_i \;=\; c\sum_{i=k}^{n} x_i
     $$
 
 3.  **Eliminación de términos** $$
-    \sum_{\substack{i=k \\ i\ne j}}^{n} x_i \;=\; \sum_{i=k}^{n} x_i - x_j.
+    \sum_{\substack{i=k \\ i\ne j}}^{n} x_i \;=\; \sum_{i=k}^{n} (x_i) - x_j
     $$
 
 4.  **Cambio de índice** $$
-    \sum_{i=k}^{n} x_i \;=\; \sum_{t=k}^{n} x_t.
+    \sum_{i=k}^{n} x_i \;=\; \sum_{t=k}^{n} x_t
     $$
 
 5.  **Asociatividad (linealidad en la suma)** $$
     \sum_{i=k}^{n} (x_i + y_i)
-    \;=\; \sum_{i=k}^{n} x_i \;+\; \sum_{i=k}^{n} y_i.
+    \;=\; \sum_{i=k}^{n} (x_i) \;+\; \sum_{i=k}^{n} (y_i)
     $$
 
 ### Algunas identidades importantes
 
 1.  **Suma de Gauss** $$
-    \sum_{i=1}^{n} i \;=\; \frac{n(n+1)}{2}.
+    \sum_{i=1}^{n} i \;=\; \frac{n(n+1)}{2}
     $$
 
 2.  **Suma de cuadrados** $$
-    \sum_{i=1}^{n} i^2 \;=\; \frac{n(n+1)(2n+1)}{6}.
+    \sum_{i=1}^{n} i^2 \;=\; \frac{n(n+1)(2n+1)}{6}
     $$
 
 3.  **Suma de cubos** $$
-    \sum_{i=1}^{n} i^3 \;=\; \left(\frac{n(n+1)}{2}\right)^2.
+    \sum_{i=1}^{n} i^3 \;=\; \left(\frac{n(n+1)}{2}\right)^2
     $$
 
 ### Errores por evitar (sumatorias)
@@ -95,12 +97,12 @@ Sean $\{x_i\}_{i=1}^n,\{y_i\}_{i=1}^n$ secuencias de objetos $j\in\mathbb{N}$ ta
 
 -   Productos\
     $$
-      \sum_{i=k}^{n} x_i y_i \;\ne\; \Big(\sum_{i=k}^{n} x_i\Big)\Big(\sum_{i=k}^{n} y_i\Big),
+      \sum_{i=k}^{n} x_i y_i \;\ne\; \Big(\sum_{i=k}^{n} x_i\Big)\Big(\sum_{i=k}^{n} y_i\Big)
       $$
 
 -   Potencias\
     $$
-      \sum_{i=k}^{n} x_i^{\,c} \;\ne\; \Big(\sum_{i=k}^{n} x_i\Big)^{c}.
+      \sum_{i=k}^{n} x_i^{\,c} \;\ne\; \Big(\sum_{i=k}^{n} x_i\Big)^{c}
       $$
 
 ## Productorias
@@ -108,7 +110,7 @@ Sean $\{x_i\}_{i=1}^n,\{y_i\}_{i=1}^n$ secuencias de objetos $j\in\mathbb{N}$ ta
 Sean $k,n\in\mathbb{N}$ tales que $k\le n$. Definimos la notación Pi ($\Pi$) así:
 
 $$
-\prod_{i=k}^{n} x_i \;=\; x_k \cdot x_{k+1} \cdot \dots \cdot x_{n-1} \cdot x_n.
+\prod_{i=k}^{n} x_i \;=\; x_k \cdot x_{k+1} \cdot ... \cdot x_{n-1} \cdot x_n.
 $$
 
 $$
@@ -120,47 +122,47 @@ $$
 
 ### Propiedades de la productoria
 
-Sean $\{x_i\}_{i=1}^n,\{y_i\}_{i=1}^n$ secuencias de objetos, $j$ tal que $k\le j\le n$; y $c$ constante (cualquier objeto que no varíe conforme aumenta el contador).
+Sean $\{x_i\}_{i=1}^n,\{y_i\}_{i=1}^n$ secuencias de objetos, $j \in \mathbb{N}$ tal que $k\le j\le n$, y $c$ constante (cualquier objeto que no varíe conforme aumenta el contador).
 
 1.  **Productoria de constantes** $$
     \prod_{i=k}^{n} c
     \;=\; \underbrace{c\cdot c\cdots c}_{n-k+1\ \text{veces}}
-    \;=\; c^{\,n-k+1}.
+    \;=\; c^{\,n-k+1}
     $$
 
 2.  **Constante por término** $$
     \prod_{i=k}^{n} (c\,x_i)
-    \;=\; c^{\,n-k+1}\prod_{i=k}^{n} x_i.
+    \;=\; c^{\,n-k+1}\prod_{i=k}^{n} x_i
     $$
 
 3.  **Eliminación de un término** $$
     \prod_{\substack{i=k \\ i\ne j}}^{n} x_i
-    \;=\; \frac{\prod_{i=k}^{n} x_i}{x_j}.
+    \;=\; \frac{\prod_{i=k}^{n} x_i}{x_j}
     $$
 
 4.  **Cambio de índice** $$
-    \prod_{i=k}^{n} x_i \;=\; \prod_{t=k}^{n} x_t.
+    \prod_{i=k}^{n} x_i \;=\; \prod_{t=k}^{n} x_t
     $$
 
 5.  **Conmutatividad (producto término a término)** $$
     \prod_{i=k}^{n} (x_i y_i)
-    \;=\; \Big(\prod_{i=k}^{n} x_i\Big)\Big(\prod_{i=k}^{n} y_i\Big).
+    \;=\; \Big(\prod_{i=k}^{n} x_i\Big)\Big(\prod_{i=k}^{n} y_i\Big)
     $$
 
 6.  **Cociente de productos** (si $y_i\ne 0$ para todo $i$) $$
     \prod_{i=k}^{n} \frac{x_i}{y_i}
     \;=\;
-    \frac{\prod_{i=k}^{n} x_i}{\prod_{i=k}^{n} y_i}.
+    \frac{\prod_{i=k}^{n} x_i}{\prod_{i=k}^{n} y_i}
     $$
 
 7.  **Potencia de productoria** $$
     \prod_{i=k}^{n} x_i^{\,c}
-    \;=\; \Big(\prod_{i=k}^{n} x_i\Big)^{c}.
+    \;=\; \Big(\prod_{i=k}^{n} x_i\Big)^{c}
     $$
 
 8.  **Base constante elevada a** $x_i$ $$
     \prod_{i=k}^{n} c^{\,x_i}
-    \;=\; c^{\sum_{i=k}^{n} x_i}.
+    \;=\; c^{\sum_{i=k}^{n} x_i}
     $$
 
 ### Errores por evitar (productorias)
@@ -171,9 +173,9 @@ Sean $\{x_i\}_{i=1}^n,\{y_i\}_{i=1}^n$ secuencias de objetos, $j$ tal que $k\le 
     $$
 
 **En general, las siguientes no son ciertas:** $$
-    \prod_{i=k}^{n}(x_i+y_i)\;\ne\;\prod_{i=k}^{n}x_i+\prod_{i=k}^{n}y_i,
+    \prod_{i=k}^{n}(x_i+y_i)\;\ne\;\prod_{i=k}^{n}(x_i)+\prod_{i=k}^{n}(y_i)
     $$ $$
-    \prod_{i=k}^{n}(x_i-y_i)\;\ne\;\prod_{i=k}^{n}x_i-\prod_{i=k}^{n}y_i.
+    \prod_{i=k}^{n}(x_i-y_i)\;\ne\;\prod_{i=k}^{n}(x_i)-\prod_{i=k}^{n}(y_i)
     $$
 
 ::: callout-tip
@@ -190,13 +192,119 @@ Simplifique al máximo, usando las propiedades:
 2.  $\displaystyle
     \sum_{i=1}^{n}\left[\,x_i\sum_{j=1}^{n}\left(\frac{1}{x_j}\right)\right]$
 3.  $\displaystyle
-    x_j^{2}\,\prod_{\substack{i=2 \\ i\ne j}}^{\,n}\frac{P_j\,x_j}{P_i}$
+     \sum_{i=1}^n\left[\,x_i\left(\frac{1}{\sum_{j=1}^n x_j}\right)\right]$
 4.  $\displaystyle
-    \prod_{j=2}^{n}\frac{P_j}{\prod_{i=1}^{n} P_i^{\,1/n}}$
+    x_j^{2}\,\prod_{\substack{i=2 \\ i\ne j}}^{\,n}\frac{P_j\,x_j}{P_i}$
 5.  $\displaystyle
-    \sum_{i=1}^{n}\big(i^{2}+i+1\big)$
+    \prod_{j=2}^{n}\frac{P_j}{\prod_{i=1}^{n} P_i^{\,1/n}}$
 6.  $\displaystyle
-    \log\!\left(\prod_{i=1}^{n}\frac{x_i^{\alpha_i}}{i}\right)$
+    \sum_{i=1}^{n}\big(i^{2}+i+1\big)$
+7.  $\displaystyle
+    \log\!\left(\prod_{i=1}^{n}x_i^{\alpha_i}\right)$
+
+### Solución
+
+1)  
+
+$$
+     \begin{aligned}
+       \frac{\prod_{\substack{i=1 \\ i\ne j}}^{n} x_i}
+            {\prod_{\substack{i=1 \\ i\ne k}}^{n} x_i}
+     &= \frac{\dfrac{1}{x_j} \cdot \prod_{i=1}^{n} x_i}
+           {\dfrac{1}{x_k} \cdot \prod_{i=1}^{n} x_i}
+      \quad \text{(Propiedad 3)} \\[6pt]
+     &= \frac{\frac{1}{x_j}}{\frac{1}{x_k}} \\[6pt]
+     &= \frac{x_k}{x_j}
+     \end{aligned}
+     $$
+
+2)  
+
+$$
+\begin{aligned}
+    \sum_{i=1}^n \left[ x_i \sum_{j=1}^n \left( \frac{1}{x_j} \right) \right]
+&= \left( \sum_{j=1}^n \frac{1}{x_j} \right) \cdot \left( \sum_{i=1}^n x_i \right)
+\quad \text{(Propiedad 2)}
+\end{aligned}
+$$
+
+Note que la sumatoria $\displaystyle \sum_{j=1}^n \frac{1}{x_j}$ no depende de $i$, por lo que se toma como una constante.
+
+::: callout-caution
+Es importante mantener el orden al realizar ejercicios, por ejemplo, en este caso se podría confundir si no utiliza adecuadamente los paréntesis.
+:::
+
+3)  
+
+$$
+     \begin{aligned}
+      \sum_{i=1}^n \left[ 
+          x_i \left( \frac{1}{\sum_{j=1}^n x_j} \right) 
+      \right]
+     &= \frac{1}{\sum_{j=1}^n x_j} \cdot \sum_{i=1}^n x_i
+     \quad \text{(Propiedad 2)} \\[6pt]
+     &= \frac{1}{\sum_{j=1}^n x_j} \cdot \sum_{j=1}^n x_j
+     \quad \text{(Propiedad 4)} \\[6pt]
+     &= 1
+     \end{aligned}
+     $$
+
+4)  
+
+$$
+     \begin{aligned}
+     x_j^2 \prod_{\substack{i=2 \\ i \ne j}}^{n} \frac{P_j \, x_j}{P_i}
+     &= x_j^2 \cdot (P_j \, x_j)^{n-2+1} \cdot \prod_{\substack{i=2 \\ i \ne j}}^{n} \frac{1}{P_i} \\[6pt]
+     &= x_j^{n+1} P_j^{n-1} \cdot \prod_{\substack{i=2 \\ i \ne j}}^{n} \frac{1}{P_i}
+     \quad \text{(Propiedad 3)} \\[6pt]
+     &= x_j^{n+1} P_j^{n-1} P_j \cdot \prod_{i=2}^n \frac{1}{P_i} \\[6pt]
+     &= x_j^{n+1} P_j^{n} \cdot \prod_{i=2}^n \frac{1}{P_i}
+     \end{aligned}
+     $$
+
+5)  
+
+$$
+\begin{aligned}
+\prod_{j=2}^n \left[ \frac{P_j}{\prod_{i=1}^n P_i^{\frac{1}{n}}} \right]
+&= \frac{\prod_{j=2}^n P_j}{\prod_{j=2}^n \left[ \prod_{i=1}^n P_i^{\frac{1}{n}} \right]} 
+\quad \text{(Propiedad 6)} \\[6pt]
+&= \frac{\prod_{j=2}^n P_j}{\left( \prod_{i=1}^n P_i^{\frac{1}{n}} \right)^{n-2+1}}
+\quad \text{(Propiedad 2)} \\[6pt]
+&= \frac{\prod_{j=2}^n P_j}{\prod_{i=1}^n P_i^{\frac{n-1}{n}}} \quad \text{(Propiedad 7)}\\[6pt]
+&= \frac{\prod_{j=2}^n P_j}{\prod_{i=1}^n (P_i) \cdot \prod_{i=1}^n (P_i^{-\frac{1}{n}})} \quad \text{(Propiedad 5)}
+  \\[6pt]
+&= \underbrace{\prod_{i=1}^n \left(P_i^{-1}\right)}_{\text{Se saca un producto}} \cdot \prod_{i=1}^n \left(P_i^{-\frac{1}{n}}\right)\cdot \prod_{j=2}^n \left(P_j\right) \\[6pt]
+&= P_1^{-1} \cdot \prod_{i=2}^n (P_i^{-1}) \cdot \prod_{i=1}^n (P_i^{-\frac{1}{n}}) \cdot \prod_{j=2}^n (P_j) 
+\quad \text{(Propiedades 4 y 5)} \\[6pt]
+&= P_1^{-1} \cdot \prod_{i=1}^n (P_i^{-\frac{1}{n}}) \cdot \prod_{i=2}^n (P_i^{-1} P_i) \\[6pt]
+&= P_1^{-1} \cdot \prod_{i=1}^n (P_i^{-\frac{1}{n}}) \cdot 1
+\end{aligned}$$
+
+6)  
+
+$$
+     \begin{aligned}
+     \sum_{i=1}^n (i^2 + i + 1) 
+     &= \sum_{i=1}^n i^2 + \sum_{i=1}^n i + \sum_{i=1}^n 1 \quad \text{(Propiedad 5 e identidades)} \\[4pt]
+     &= \frac{n(n+1)(2n+1)}{6} + \frac{n(n+1)}{2} + n
+     \end{aligned}
+     $$
+
+7)  
+
+$$
+\log\left( \prod_{i=1}^n x_i^{\alpha_i} \right)
+$$
+
+Nota*:* Recuerde la propiedad $\log(a \cdot b) = \log(a) + \log(b)$, en general $\log\left( \prod_{i=1}^n x_i \right) = \sum_{i=1}^n \log(x_i)$.\
+Además, $\log(a^b) = b \log(a)$
+
+$$
+\log\left( \prod_{i=1}^n x_i^{\alpha_i} \right)
+= \sum_{i=1}^n \log\left( x_i^{\alpha_i} \right)
+= \sum_{i=1}^n \alpha_i \cdot \log(x_i)
+$$
 
 ## Optimización
 

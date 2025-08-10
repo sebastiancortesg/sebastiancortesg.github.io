@@ -216,7 +216,10 @@ window.Quarto = {
   <li><a href="#propiedades-de-la-productoria" id="toc-propiedades-de-la-productoria" class="nav-link" data-scroll-target="#propiedades-de-la-productoria">Propiedades de la productoria</a></li>
   <li><a href="#errores-por-evitar-productorias" id="toc-errores-por-evitar-productorias" class="nav-link" data-scroll-target="#errores-por-evitar-productorias">Errores por evitar (productorias)</a></li>
   </ul></li>
-  <li><a href="#ejercicio" id="toc-ejercicio" class="nav-link" data-scroll-target="#ejercicio">Ejercicio</a></li>
+  <li><a href="#ejercicio" id="toc-ejercicio" class="nav-link" data-scroll-target="#ejercicio">Ejercicio</a>
+  <ul class="collapse">
+  <li><a href="#solución" id="toc-solución" class="nav-link" data-scroll-target="#solución">Solución</a></li>
+  </ul></li>
   <li><a href="#optimización" id="toc-optimización" class="nav-link" data-scroll-target="#optimización">Optimización</a>
   <ul class="collapse">
   <li><a href="#optimización-con-restricción-de-igualdad" id="toc-optimización-con-restricción-de-igualdad" class="nav-link" data-scroll-target="#optimización-con-restricción-de-igualdad">Optimización con restricción de igualdad</a></li>
@@ -252,8 +255,9 @@ window.Quarto = {
 <section id="recomendaciones-generales" class="level1">
 <h1>Recomendaciones generales</h1>
 <ul>
-<li></li>
-<li></li>
+<li><p>Comprender la intuición detrás de los cálculos, evitar resolver solo de manera mecánica.</p></li>
+<li><p>Realizar mucha práctica (exámenes viejos y folletos de ejercicios), es importante desarrollar una buena habilidad en la manipulación algebraica.</p></li>
+<li><p>No deje dudas sin aclarar, ya que el curso tiene un carácter acumulativo.</p></li>
 </ul>
 </section>
 <section id="lab-1-sumatorias-productorias-y-optimización" class="level1">
@@ -265,7 +269,7 @@ Para trabajar con muchos términos se usan puntos suspensivos:</p>
 <ul>
 <li><span class="math inline">\(x_1 + x_2 + x_3 + \dots + x_{n-1} + x_n,\)</span><br>
 </li>
-<li><span class="math inline">\(x_1 \cdot x_2 \cdot x_3 \cdot \dots \cdot x_{n-1} \cdot x_n.\)</span></li>
+<li><span class="math inline">\(x_1 \cdot x_2 \cdot x_3 \cdot ... \cdot x_{n-1} \cdot x_n.\)</span></li>
 </ul>
 <p>Cuando esta notación es poco conveniente, se usan las notaciones <span class="math inline">\(\Sigma\)</span> (sumatoria) y <span class="math inline">\(\Pi\)</span> (productoria).</p>
 </section>
@@ -283,25 +287,25 @@ x_i &amp;: \text{Argumento de la sumatoria} &amp;\quad n &amp;: \text{Último t�
 \]</span></p>
 <section id="propiedades-de-la-sumatoria" class="level3">
 <h3 class="anchored" data-anchor-id="propiedades-de-la-sumatoria">Propiedades de la sumatoria</h3>
-<p>Sean <span class="math inline">\(\{x_i\}_{i=1}^n,\{y_i\}_{i=1}^n\)</span> secuencias de objetos <span class="math inline">\(j\in\mathbb{N}\)</span> tal que <span class="math inline">\(k\le j\le n\)</span>; y <span class="math inline">\(c\)</span> una constante (cualquier objeto que no varíe conforme aumenta el contador).</p>
+<p>Sean <span class="math inline">\(\{x_i\}_{i=1}^n,\{y_i\}_{i=1}^n\)</span> secuencias de objetos <span class="math inline">\(j\in\mathbb{N}\)</span> tal que <span class="math inline">\(k\le j\le n\)</span>, y <span class="math inline">\(c\)</span> una constante (cualquier objeto que no varíe conforme aumenta el contador).</p>
 <ol type="1">
 <li><p><strong>Sumatoria de constantes</strong> <span class="math display">\[
 \sum_{i=k}^{n} c
 \;=\; \underbrace{c+c+\cdots+c}_{n-k+1\ \text{veces}}
-\;=\; (n-k+1)c.
+\;=\; (n-k+1)c
 \]</span></p></li>
 <li><p><strong>Distributividad</strong> <span class="math display">\[
-\sum_{i=k}^{n} c\,x_i \;=\; c\sum_{i=k}^{n} x_i.
+\sum_{i=k}^{n} c\,x_i \;=\; c\sum_{i=k}^{n} x_i
 \]</span></p></li>
 <li><p><strong>Eliminación de términos</strong> <span class="math display">\[
-\sum_{\substack{i=k \\ i\ne j}}^{n} x_i \;=\; \sum_{i=k}^{n} x_i - x_j.
+\sum_{\substack{i=k \\ i\ne j}}^{n} x_i \;=\; \sum_{i=k}^{n} (x_i) - x_j
 \]</span></p></li>
 <li><p><strong>Cambio de índice</strong> <span class="math display">\[
-\sum_{i=k}^{n} x_i \;=\; \sum_{t=k}^{n} x_t.
+\sum_{i=k}^{n} x_i \;=\; \sum_{t=k}^{n} x_t
 \]</span></p></li>
 <li><p><strong>Asociatividad (linealidad en la suma)</strong> <span class="math display">\[
 \sum_{i=k}^{n} (x_i + y_i)
-\;=\; \sum_{i=k}^{n} x_i \;+\; \sum_{i=k}^{n} y_i.
+\;=\; \sum_{i=k}^{n} (x_i) \;+\; \sum_{i=k}^{n} (y_i)
 \]</span></p></li>
 </ol>
 </section>
@@ -309,13 +313,13 @@ x_i &amp;: \text{Argumento de la sumatoria} &amp;\quad n &amp;: \text{Último t�
 <h3 class="anchored" data-anchor-id="algunas-identidades-importantes">Algunas identidades importantes</h3>
 <ol type="1">
 <li><p><strong>Suma de Gauss</strong> <span class="math display">\[
-\sum_{i=1}^{n} i \;=\; \frac{n(n+1)}{2}.
+\sum_{i=1}^{n} i \;=\; \frac{n(n+1)}{2}
 \]</span></p></li>
 <li><p><strong>Suma de cuadrados</strong> <span class="math display">\[
-\sum_{i=1}^{n} i^2 \;=\; \frac{n(n+1)(2n+1)}{6}.
+\sum_{i=1}^{n} i^2 \;=\; \frac{n(n+1)(2n+1)}{6}
 \]</span></p></li>
 <li><p><strong>Suma de cubos</strong> <span class="math display">\[
-\sum_{i=1}^{n} i^3 \;=\; \left(\frac{n(n+1)}{2}\right)^2.
+\sum_{i=1}^{n} i^3 \;=\; \left(\frac{n(n+1)}{2}\right)^2
 \]</span></p></li>
 </ol>
 </section>
@@ -332,11 +336,11 @@ x_i &amp;: \text{Argumento de la sumatoria} &amp;\quad n &amp;: \text{Último t�
   \]</span></p></li>
 <li><p>Productos<br>
 <span class="math display">\[
-  \sum_{i=k}^{n} x_i y_i \;\ne\; \Big(\sum_{i=k}^{n} x_i\Big)\Big(\sum_{i=k}^{n} y_i\Big),
+  \sum_{i=k}^{n} x_i y_i \;\ne\; \Big(\sum_{i=k}^{n} x_i\Big)\Big(\sum_{i=k}^{n} y_i\Big)
   \]</span></p></li>
 <li><p>Potencias<br>
 <span class="math display">\[
-  \sum_{i=k}^{n} x_i^{\,c} \;\ne\; \Big(\sum_{i=k}^{n} x_i\Big)^{c}.
+  \sum_{i=k}^{n} x_i^{\,c} \;\ne\; \Big(\sum_{i=k}^{n} x_i\Big)^{c}
   \]</span></p></li>
 </ul>
 </section>
@@ -345,7 +349,7 @@ x_i &amp;: \text{Argumento de la sumatoria} &amp;\quad n &amp;: \text{Último t�
 <h2 class="anchored" data-anchor-id="productorias">Productorias</h2>
 <p>Sean <span class="math inline">\(k,n\in\mathbb{N}\)</span> tales que <span class="math inline">\(k\le n\)</span>. Definimos la notación Pi (<span class="math inline">\(\Pi\)</span>) así:</p>
 <p><span class="math display">\[
-\prod_{i=k}^{n} x_i \;=\; x_k \cdot x_{k+1} \cdot \dots \cdot x_{n-1} \cdot x_n.
+\prod_{i=k}^{n} x_i \;=\; x_k \cdot x_{k+1} \cdot ... \cdot x_{n-1} \cdot x_n.
 \]</span></p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -355,40 +359,40 @@ x_i &amp;: \text{Argumento de la productoria} &amp;\quad n &amp;: \text{Último 
 \]</span></p>
 <section id="propiedades-de-la-productoria" class="level3">
 <h3 class="anchored" data-anchor-id="propiedades-de-la-productoria">Propiedades de la productoria</h3>
-<p>Sean <span class="math inline">\(\{x_i\}_{i=1}^n,\{y_i\}_{i=1}^n\)</span> secuencias de objetos, <span class="math inline">\(j\)</span> tal que <span class="math inline">\(k\le j\le n\)</span>; y <span class="math inline">\(c\)</span> constante (cualquier objeto que no varíe conforme aumenta el contador).</p>
+<p>Sean <span class="math inline">\(\{x_i\}_{i=1}^n,\{y_i\}_{i=1}^n\)</span> secuencias de objetos, <span class="math inline">\(j \in \mathbb{N}\)</span> tal que <span class="math inline">\(k\le j\le n\)</span>, y <span class="math inline">\(c\)</span> constante (cualquier objeto que no varíe conforme aumenta el contador).</p>
 <ol type="1">
 <li><p><strong>Productoria de constantes</strong> <span class="math display">\[
 \prod_{i=k}^{n} c
 \;=\; \underbrace{c\cdot c\cdots c}_{n-k+1\ \text{veces}}
-\;=\; c^{\,n-k+1}.
+\;=\; c^{\,n-k+1}
 \]</span></p></li>
 <li><p><strong>Constante por término</strong> <span class="math display">\[
 \prod_{i=k}^{n} (c\,x_i)
-\;=\; c^{\,n-k+1}\prod_{i=k}^{n} x_i.
+\;=\; c^{\,n-k+1}\prod_{i=k}^{n} x_i
 \]</span></p></li>
 <li><p><strong>Eliminación de un término</strong> <span class="math display">\[
 \prod_{\substack{i=k \\ i\ne j}}^{n} x_i
-\;=\; \frac{\prod_{i=k}^{n} x_i}{x_j}.
+\;=\; \frac{\prod_{i=k}^{n} x_i}{x_j}
 \]</span></p></li>
 <li><p><strong>Cambio de índice</strong> <span class="math display">\[
-\prod_{i=k}^{n} x_i \;=\; \prod_{t=k}^{n} x_t.
+\prod_{i=k}^{n} x_i \;=\; \prod_{t=k}^{n} x_t
 \]</span></p></li>
 <li><p><strong>Conmutatividad (producto término a término)</strong> <span class="math display">\[
 \prod_{i=k}^{n} (x_i y_i)
-\;=\; \Big(\prod_{i=k}^{n} x_i\Big)\Big(\prod_{i=k}^{n} y_i\Big).
+\;=\; \Big(\prod_{i=k}^{n} x_i\Big)\Big(\prod_{i=k}^{n} y_i\Big)
 \]</span></p></li>
 <li><p><strong>Cociente de productos</strong> (si <span class="math inline">\(y_i\ne 0\)</span> para todo <span class="math inline">\(i\)</span>) <span class="math display">\[
 \prod_{i=k}^{n} \frac{x_i}{y_i}
 \;=\;
-\frac{\prod_{i=k}^{n} x_i}{\prod_{i=k}^{n} y_i}.
+\frac{\prod_{i=k}^{n} x_i}{\prod_{i=k}^{n} y_i}
 \]</span></p></li>
 <li><p><strong>Potencia de productoria</strong> <span class="math display">\[
 \prod_{i=k}^{n} x_i^{\,c}
-\;=\; \Big(\prod_{i=k}^{n} x_i\Big)^{c}.
+\;=\; \Big(\prod_{i=k}^{n} x_i\Big)^{c}
 \]</span></p></li>
 <li><p><strong>Base constante elevada a</strong> <span class="math inline">\(x_i\)</span> <span class="math display">\[
 \prod_{i=k}^{n} c^{\,x_i}
-\;=\; c^{\sum_{i=k}^{n} x_i}.
+\;=\; c^{\sum_{i=k}^{n} x_i}
 \]</span></p></li>
 </ol>
 </section>
@@ -399,9 +403,9 @@ x_i &amp;: \text{Argumento de la productoria} &amp;\quad n &amp;: \text{Último 
     \prod_{i=k}^{n}\Bigg(\prod_{\ell=k}^{n} x_{i\ell}\Bigg)\quad\text{(correcto)}
     \]</span></p>
 <p><strong>En general, las siguientes no son ciertas:</strong> <span class="math display">\[
-    \prod_{i=k}^{n}(x_i+y_i)\;\ne\;\prod_{i=k}^{n}x_i+\prod_{i=k}^{n}y_i,
+    \prod_{i=k}^{n}(x_i+y_i)\;\ne\;\prod_{i=k}^{n}(x_i)+\prod_{i=k}^{n}(y_i)
     \]</span> <span class="math display">\[
-    \prod_{i=k}^{n}(x_i-y_i)\;\ne\;\prod_{i=k}^{n}x_i-\prod_{i=k}^{n}y_i.
+    \prod_{i=k}^{n}(x_i-y_i)\;\ne\;\prod_{i=k}^{n}(x_i)-\prod_{i=k}^{n}(y_i)
     \]</span></p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -428,14 +432,127 @@ Tip
 <li><span class="math inline">\(\displaystyle
 \sum_{i=1}^{n}\left[\,x_i\sum_{j=1}^{n}\left(\frac{1}{x_j}\right)\right]\)</span></li>
 <li><span class="math inline">\(\displaystyle
+\sum_{i=1}^n\left[\,x_i\left(\frac{1}{\sum_{j=1}^n x_j}\right)\right]\)</span></li>
+<li><span class="math inline">\(\displaystyle
 x_j^{2}\,\prod_{\substack{i=2 \\ i\ne j}}^{\,n}\frac{P_j\,x_j}{P_i}\)</span></li>
 <li><span class="math inline">\(\displaystyle
 \prod_{j=2}^{n}\frac{P_j}{\prod_{i=1}^{n} P_i^{\,1/n}}\)</span></li>
 <li><span class="math inline">\(\displaystyle
 \sum_{i=1}^{n}\big(i^{2}+i+1\big)\)</span></li>
 <li><span class="math inline">\(\displaystyle
-\log\!\left(\prod_{i=1}^{n}\frac{x_i^{\alpha_i}}{i}\right)\)</span></li>
+\log\!\left(\prod_{i=1}^{n}x_i^{\alpha_i}\right)\)</span></li>
 </ol>
+<section id="solución" class="level3">
+<h3 class="anchored" data-anchor-id="solución">Solución</h3>
+<ol type="1">
+<li></li>
+</ol>
+<p><span class="math display">\[
+     \begin{aligned}
+       \frac{\prod_{\substack{i=1 \\ i\ne j}}^{n} x_i}
+            {\prod_{\substack{i=1 \\ i\ne k}}^{n} x_i}
+     &amp;= \frac{\dfrac{1}{x_j} \cdot \prod_{i=1}^{n} x_i}
+           {\dfrac{1}{x_k} \cdot \prod_{i=1}^{n} x_i}
+      \quad \text{(Propiedad 3)} \\[6pt]
+     &amp;= \frac{\frac{1}{x_j}}{\frac{1}{x_k}} \\[6pt]
+     &amp;= \frac{x_k}{x_j}
+     \end{aligned}
+     \]</span></p>
+<ol start="2" type="1">
+<li></li>
+</ol>
+<p><span class="math display">\[
+\begin{aligned}
+    \sum_{i=1}^n \left[ x_i \sum_{j=1}^n \left( \frac{1}{x_j} \right) \right]
+&amp;= \left( \sum_{j=1}^n \frac{1}{x_j} \right) \cdot \left( \sum_{i=1}^n x_i \right)
+\quad \text{(Propiedad 2)}
+\end{aligned}
+\]</span></p>
+<p>Note que la sumatoria <span class="math inline">\(\displaystyle \sum_{j=1}^n \frac{1}{x_j}\)</span> no depende de <span class="math inline">\(i\)</span>, por lo que se toma como una constante.</p>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Precaución
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Es importante mantener el orden al realizar ejercicios, por ejemplo, en este caso se podría confundir si no utiliza adecuadamente los paréntesis.</p>
+</div>
+</div>
+<ol start="3" type="1">
+<li></li>
+</ol>
+<p><span class="math display">\[
+     \begin{aligned}
+      \sum_{i=1}^n \left[
+          x_i \left( \frac{1}{\sum_{j=1}^n x_j} \right)
+      \right]
+     &amp;= \frac{1}{\sum_{j=1}^n x_j} \cdot \sum_{i=1}^n x_i
+     \quad \text{(Propiedad 2)} \\[6pt]
+     &amp;= \frac{1}{\sum_{j=1}^n x_j} \cdot \sum_{j=1}^n x_j
+     \quad \text{(Propiedad 4)} \\[6pt]
+     &amp;= 1
+     \end{aligned}
+     \]</span></p>
+<ol start="4" type="1">
+<li></li>
+</ol>
+<p><span class="math display">\[
+     \begin{aligned}
+     x_j^2 \prod_{\substack{i=2 \\ i \ne j}}^{n} \frac{P_j \, x_j}{P_i}
+     &amp;= x_j^2 \cdot (P_j \, x_j)^{n-2+1} \cdot \prod_{\substack{i=2 \\ i \ne j}}^{n} \frac{1}{P_i} \\[6pt]
+     &amp;= x_j^{n+1} P_j^{n-1} \cdot \prod_{\substack{i=2 \\ i \ne j}}^{n} \frac{1}{P_i}
+     \quad \text{(Propiedad 3)} \\[6pt]
+     &amp;= x_j^{n+1} P_j^{n-1} P_j \cdot \prod_{i=2}^n \frac{1}{P_i} \\[6pt]
+     &amp;= x_j^{n+1} P_j^{n} \cdot \prod_{i=2}^n \frac{1}{P_i}
+     \end{aligned}
+     \]</span></p>
+<ol start="5" type="1">
+<li></li>
+</ol>
+<p><span class="math display">\[
+\begin{aligned}
+\prod_{j=2}^n \left[ \frac{P_j}{\prod_{i=1}^n P_i^{\frac{1}{n}}} \right]
+&amp;= \frac{\prod_{j=2}^n P_j}{\prod_{j=2}^n \left[ \prod_{i=1}^n P_i^{\frac{1}{n}} \right]}
+\quad \text{(Propiedad 6)} \\[6pt]
+&amp;= \frac{\prod_{j=2}^n P_j}{\left( \prod_{i=1}^n P_i^{\frac{1}{n}} \right)^{n-2+1}}
+\quad \text{(Propiedad 2)} \\[6pt]
+&amp;= \frac{\prod_{j=2}^n P_j}{\prod_{i=1}^n P_i^{\frac{n-1}{n}}} \quad \text{(Propiedad 7)}\\[6pt]
+&amp;= \frac{\prod_{j=2}^n P_j}{\prod_{i=1}^n (P_i) \cdot \prod_{i=1}^n (P_i^{-\frac{1}{n}})} \quad \text{(Propiedad 5)}
+  \\[6pt]
+&amp;= \underbrace{\prod_{i=1}^n \left(P_i^{-1}\right)}_{\text{Se saca un producto}} \cdot \prod_{i=1}^n \left(P_i^{-\frac{1}{n}}\right)\cdot \prod_{j=2}^n \left(P_j\right) \\[6pt]
+&amp;= P_1^{-1} \cdot \prod_{i=2}^n (P_i^{-1}) \cdot \prod_{i=1}^n (P_i^{-\frac{1}{n}}) \cdot \prod_{j=2}^n (P_j)
+\quad \text{(Propiedades 4 y 5)} \\[6pt]
+&amp;= P_1^{-1} \cdot \prod_{i=1}^n (P_i^{-\frac{1}{n}}) \cdot \prod_{i=2}^n (P_i^{-1} P_i) \\[6pt]
+&amp;= P_1^{-1} \cdot \prod_{i=1}^n (P_i^{-\frac{1}{n}}) \cdot 1
+\end{aligned}\]</span></p>
+<ol start="6" type="1">
+<li></li>
+</ol>
+<p><span class="math display">\[
+     \begin{aligned}
+     \sum_{i=1}^n (i^2 + i + 1)
+     &amp;= \sum_{i=1}^n i^2 + \sum_{i=1}^n i + \sum_{i=1}^n 1 \quad \text{(Propiedad 5 e identidades)} \\[4pt]
+     &amp;= \frac{n(n+1)(2n+1)}{6} + \frac{n(n+1)}{2} + n
+     \end{aligned}
+     \]</span></p>
+<ol start="7" type="1">
+<li></li>
+</ol>
+<p><span class="math display">\[
+\log\left( \prod_{i=1}^n x_i^{\alpha_i} \right)
+\]</span></p>
+<p>Nota<em>:</em> Recuerde la propiedad <span class="math inline">\(\log(a \cdot b) = \log(a) + \log(b)\)</span>, en general <span class="math inline">\(\log\left( \prod_{i=1}^n x_i \right) = \sum_{i=1}^n \log(x_i)\)</span>.<br>
+Además, <span class="math inline">\(\log(a^b) = b \log(a)\)</span></p>
+<p><span class="math display">\[
+\log\left( \prod_{i=1}^n x_i^{\alpha_i} \right)
+= \sum_{i=1}^n \log\left( x_i^{\alpha_i} \right)
+= \sum_{i=1}^n \alpha_i \cdot \log(x_i)
+\]</span></p>
+</section>
 </section>
 <section id="optimización" class="level2">
 <h2 class="anchored" data-anchor-id="optimización">Optimización</h2>
